@@ -39,8 +39,8 @@ const scopes = [
 let redirectUri = "http://127.0.0.1:3000/home";
 
 const spotifyApi = new SpotifyWebApi({
-  clientId: "89451042fd5e4b70b96fa8742a5f4bfd",
-  clientSecret: "dccd34c9e2f24ef4b6c38a37ea48531a",
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
   redirectUri: "http://127.0.0.1:3000/home",
 });
 //   spotifyApi.setAccessToken("BQCUM477H7Sd1h3tSlZcxdjxIVtq9knsQYmKcvs5MPrO5WmxKcfsWS2iP61Bb6lHsQv6MfDppeldbRe3Y4_kYACh6uE-9MImFB6ICNPzyJ1OWgZd1FBjUB-G7TzQ_60X2Tr1-mygnsjTovhSQDO42_VCz78nepqOnkmp7pKNBESg9Zs0BvxGWg")
