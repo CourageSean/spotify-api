@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="home-body">
+    <section class="home-section">
+        <form action="/search" method="GET">
+            <input type="text" name="artist" placeholder="search artist">
+            <input type="submit" value="SEARCH">
+        </form>
+      <h2>New Album Releases</h2>
+        <div class="new-release-container">
+            <% newReleases.forEach(element => { %>
+             <div class="new-release-item" style="background-image: url(<%=`${element.images[1].url}`%>)">
+                <h3> <%=element.name  %> </h3>
+               
+            
+            </div>
+            <% }) %>
+        </div>
+        <h2>Shows you might like</h2>
+        <a class="home-anker-tag" href="">Home</a>
+        <a class="playlist-anker-tag" href="">My Playlists</a>
+        <div class="genre-container" style="display:flex">
+            <div style="background-color: #3252f8">
+                <h3 style="color: white;">Hip Hop</h3>
+            </div>
+            <div  style="background-color: #ff5474">
+                <h3 style="color: white;">Party</h3>
+            </div>
+            <div  style="background-color: #ff7448">
+                <h3 style="color: white;">House</h3>
+            </div>
+            <div  style="background-color: #8c57ff">
+                <h3 style="color: white;">Late Night</h3>
+            </div>
+    
+      
+        </div>
+    </section>
+    
+    
+</body>
+</html>
