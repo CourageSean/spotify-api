@@ -153,19 +153,19 @@ app.get("/artist/album/:id", (req, res) => {
   );
 });
 
-app.get("/create_playlist", (req, res) => {
-  spotifyApi
-    .createPlaylist("My playlist", {
-      description: "My description",
-      public: true,
-    })
-    .then(
-      function (data) {
-        console.log("Created playlist!");
-        console.log(data)
-      },
-      function (err) {
-        console.log("Something went wrong!", err);
-      }
-    );
-});
+// app.get("/create_playlist", (req, res) => {
+//   spotifyApi
+//     .createPlaylist("My playlist", {
+//       description: "My description",
+//       public: true,
+//     })
+//     .then(
+//       function (data) {
+//         console.log("Created playlist!");
+//         console.log(data)
+//       },
+//       function (err) {
+//         console.log("Something went wrong!", err);
+//       }
+//     );
+// });
